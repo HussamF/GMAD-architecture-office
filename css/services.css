@@ -1,0 +1,124 @@
+.service {
+  min-height: 100vh;
+  padding: 6rem 0;
+  display: flex;
+}
+.service h1 {
+  margin-top: 2rem;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.service h1::after {
+  content: "";
+  max-width: 500px;
+  height: 1px;
+  background: linear-gradient(to right, black, transparent);
+  margin: 1rem 0 2rem;
+}
+.service-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.service-container img {
+  max-width: 80%;
+}
+.accordion {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.first-service {
+  margin-bottom: 3rem;
+}
+
+.first-service h2 {
+  font-size: 2.2rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.first-service p {
+  font-size: 1.8rem;
+  font-family: "Abel", sans-serif;
+  line-height: 1.4;
+}
+
+.second-service {
+  margin-bottom: 2rem;
+}
+
+.second-service h2 {
+  font-size: 2.2rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.second-service p {
+  font-size: 1.8rem;
+  font-family: "Abel", sans-serif;
+  line-height: 1.4;
+  font-weight: 500;
+  color: rgb(44, 44, 44);
+}
+
+.accordion-item {
+  background-color: rgb(243, 243, 243);
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.accordion-item .accordion-header h3 {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 5rem;
+  line-height: 1.6;
+  font-weight: 500;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion-item .accordion-header h3::after {
+  content: "\25be";
+  font-size: 2.5rem;
+  position: absolute;
+  right: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.accordion-item .accordion-header.active h3::after {
+  transform: rotate(-180deg);
+}
+
+.accordion-item:hover {
+  background: #fff;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.accordion-body-content p {
+  font-size: 1.6rem;
+  line-height: 1.1;
+  padding: 1rem;
+  font-family: "Abel", sans-serif;
+}
+
+.accordion-body-content p:first-child {
+  border-top: 1px solid black;
+  border-image: linear-gradient(to right, black, transparent) 1;
+}
